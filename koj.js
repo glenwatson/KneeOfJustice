@@ -55,8 +55,8 @@ var loadKnee = function ()
 	$(function()
 	{
 		var yesSound = $('<audio id="yes" preload="auto">'
-			+'<source src="https://raw.github.com/glenwatson/KneeOfJustice/master/yesTrimmed.wav" />'
-			+'<source src="https://raw.github.com/glenwatson/KneeOfJustice/master/yesTrimmed.mp3" />'
+			+'<source src="https://raw.github.com/glenwatson/KneeOfJustice/master/yes.wav" />'
+			+'<source src="https://raw.github.com/glenwatson/KneeOfJustice/master/yes.mp3" />'
 			+'</audio>');
 		$('body').append(yesSound);
 	});
