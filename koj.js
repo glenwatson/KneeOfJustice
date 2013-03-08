@@ -64,7 +64,7 @@ var loadKnee = function ()
 	//animate koj on element
 	function knee(ele)
 	{
-		var koj = $('<img src="http://glenwatson.github.com/KneeOfJustice/master/KOJ.png" />');
+		var koj = $('<img src="KOJ.png" />');
 		
 		var target = $(ele);
 		var targetRight = target.offset().left+target.width();
