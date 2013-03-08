@@ -55,8 +55,8 @@ var loadKnee = function ()
 	$(function()
 	{
 		var yesSound = $('<audio id="yes" preload="auto">'
-			+'<source src="https://glenwatson.github.com/KneeOfJustice/master/yes.wav" />'
-			+'<source src="https://glenwatson.github.com/KneeOfJustice/master/yes.mp3" />'
+			+'<source src="yes.wav" />'
+			+'<source src="yes.mp3" />'
 			+'</audio>');
 		$('body').append(yesSound);
 	});
@@ -64,7 +64,7 @@ var loadKnee = function ()
 	//animate koj on element
 	function knee(ele)
 	{
-		var koj = $('<img src="https://glenwatson.github.com/KneeOfJustice/master/KOJ.png" />');
+		var koj = $('<img src="http://glenwatson.github.com/KneeOfJustice/master/KOJ.png" />');
 		
 		var target = $(ele);
 		var targetRight = target.offset().left+target.width();
@@ -115,7 +115,7 @@ var loadKnee = function ()
 	function replace(ele)
 	{
 		var style = window.getComputedStyle(ele, null);
-		var holder = $('<img src="https://glenwatson.github.com/KneeOfJustice/master/blank.gif" />')
+		var holder = $('<img src="blank.gif" />')
 			// copy over all positioning css ele -> holder
 			.css({
 				width: style.getPropertyValue('width'),
@@ -175,7 +175,7 @@ if (typeof jQuery === 'undefined')
 {
 	var j = document.createElement('script');
 	j.type = 'text/javascript';
-	j.src = 'https://glenwatson.github.com/KneeOfJustice/master/jQuery1.9.0.js';
+	j.src = 'jQuery1.9.0.js';
 	j.onload = loadKnee;
 	document.getElementsByTagName('head')[0].appendChild(j);
 }
