@@ -64,14 +64,14 @@ var loadKnee = function ()
 	//animate koj on element
 	function knee(ele)
 	{
-		var koj = $('<img src="https://raw.github.com/glenwatson/KneeOfJustice/master/KOJ.png" style="position:absolute; left:100%"/>');
+		var koj = $('<img src="https://raw.github.com/glenwatson/KneeOfJustice/master/KOJ.png" />');
 		
 		var target = $(ele);
 		var targetRight = target.offset().left+target.width();
 		var targetTop = target.offset().top;
 		koj.css({
 			'position':'absolute',
-			'top':target.offset().top + 150,
+			'top':targetTop + 150,
 			'left':targetRight + window.innerWidth
 		});
 		
@@ -93,7 +93,7 @@ var loadKnee = function ()
 					target.remove();
 					koj.animate(
 						{
-							top: targetTop,
+							top: targetTop + 150,
 							left: targetRight - window.innerWidth
 						}, 
 						600, 
@@ -116,7 +116,7 @@ var loadKnee = function ()
 	{
 		var style = window.getComputedStyle(ele, null);
 		var holder = $('<img src="https://raw.github.com/glenwatson/KneeOfJustice/master/blank.gif" />')
-			// copy over all css ele -> holder
+			// copy over all positioning css ele -> holder
 			.css({
 				width: style.getPropertyValue('width'),
 				height: style.getPropertyValue('height'),
@@ -141,8 +141,8 @@ var loadKnee = function ()
 		
 		$(ele).css({
 			position: 'absolute',
-			top: $(ele).offset().top,
-			left: $(ele).offset().left
+			top: $(ele).position().top,
+			left: $(ele).position().left
 			/*'margin-top': '',
 			'margin-left': '',
 			'margin-right': '',
